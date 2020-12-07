@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<html>
+    <head>
+        <title>{{ title }} - RPS</title>
+    </head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+        <body>
+        <header>
+        <h1>Play Rock, Paper and Scissors!</h1>
+        <h3>Make your choices here</h3>
+        </header>
+
+        <section>    
+        
+            <form action="/play" method="post">
+                
+                <label for="player1_name">Player 1 name:</label>
+                <input type="text" id="player1_name" name="player1_name">
+                <select name=player1>
+                    <option value="" default selected>Player one, choose</option>
+                    <option value="rock">Rock</option>
+                    <option value="scissors">Scissors</option>
+                    <option value="paper">Paper</option>
+                </select>
+                
+                <br>
+
+                <label for="player2_name">Player 2 name:</label>
+                <input type="text" id="player2_name" name="player2_name">
+                <select name=player2>
+                    <option value="" default selected>Player two, choose</option>
+                    <option value="rock">Rock</option>
+                    <option value="scissors">Scissors</option>
+                    <option value="paper">Paper</option><br>
+                </select>
+                <br><input type="submit">
+            
+            </form>
+        
+        </section>
+
+    </body>
+</html>
+
+{% endblock %}

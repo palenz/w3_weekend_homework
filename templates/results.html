@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<html>
+    <head>
+        <title>Result</title>
+    </head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+        <body>
+
+            <header>
+            <p><b>{{result}}</b></p>
+            </header>
+
+        <section>
+            <h2>
+                Historical performance
+            </h2>
+
+            <table style="width:300px">
+                <tr>
+                  <th>Player</th>
+                  <th>Wins</th>
+                  <th>Losses</th>
+                </tr>
+                <tr>
+                  <td><b>{{player1.name}}</b></td>
+                  <td>{{player1.wins}}</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td><b>{{player2.name}}</b></td>
+                  <td>{{player2.wins}}</td>
+                  <td>0</td>
+                </tr>
+              </table>
+        <a href="/">play again</a>
+
+        </section>
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+body{
+    background-color: lightsteelblue;
+    font-family: monospace;
+}
+
+header{
+    text-align: center;
+}
+
+header>h1{
+    font-size: 42pt;
+    margin-top: 8%;
+}
+
+header>p{
+    font-size: 42pt;
+    margin-top: 8%;
+}
+
+option[default] {
+    display: none;
+ }
+
+input{
+    font-family: monospace;
+    margin-left: 2%;
+    margin-top: 2%;
+ }
+
+ form{
+     margin-top: 10%;
+     text-align: center;
+ }
